@@ -1,0 +1,99 @@
+Last login: Wed May  7 14:44:33 on ttys000
+chenliwen@MacBook-Air-697 ~ % ssh lchen@gw.cita.utoronto.ca
+(lchen@gw.cita.utoronto.ca) Password: 
+(lchen@gw.cita.utoronto.ca) Verification code: 810101
+Last login: Wed May  7 14:45:19 2025 from 100.66.80.224
+-bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+gw$ git clone https://github.com/lwcxx/CTA200_2025.git
+Cloning into 'CTA200_2025'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), done.
+gw$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+gw$ git push --set-upstream origin master
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+gw$ ssh-keygen -t ed25519 -C "cx0026@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/lchen/.ssh/id_ed25519): /home/lchen^ Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Passphrases do not match.  Try again.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Saving key "/home/lccheen" failed: Permission denied
+gw$ ssh-keygen -t ed25519 -C "cx0026@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/lchen/.ssh/id_ed25519): /home/lchen
+/home/lchen already exists.
+Overwrite (y/n)? n
+gw$ ssh-keygen -t ed25519 -C "cx0026@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/lchen/.ssh/id_ed25519):     
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/lchen/.ssh/id_ed25519.
+Your public key has been saved in /home/lchen/.ssh/id_ed25519.pub.
+The key fingerprint is:
+SHA256:/i7bEkEGOU/zBXHYFk1M49zQwlY0wH1nvYjmKkmStRE cx0026@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|      .o  o=+OB=+|
+|      oE= ..++*=B|
+|       *.o o..+o=|
+|       oo .o . . |
+|      o S.o      |
+|     o +.  .     |
+|      o o..      |
+|       oo+       |
+|        o=+      |
++----[SHA256]-----+
+gw$ pbcopy < ~/.ssh/id_ed25519.pub
+-bash: pbcopy: command not found
+gw$ eval "$(ssh-agent -s)"
+Agent pid 32633
+gw$ open ~/.ssh/config
+Couldn't get a file descriptor referring to the console
+gw$ touch ~/.ssh/config
+gw$ vi ~/.ssh/config
+gw$ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+unknown option -- -
+usage: ssh-add [options] [file ...]
+Options:
+  -l          List fingerprints of all identities.
+  -E hash     Specify hash algorithm used for fingerprints.
+  -L          List public key parameters of all identities.
+  -k          Load only keys and not certificates.
+  -c          Require confirmation to sign using identities
+  -t life     Set lifetime (in seconds) when adding identities.
+  -d          Delete identity.
+  -D          Delete all identities.
+  -x          Lock agent.
+  -X          Unlock agent.
+  -s pkcs11   Add keys from PKCS#11 provider.
+  -e pkcs11   Remove keys provided by PKCS#11 provider.
+gw$ pbcopy < ~/.ssh/id_ed25519.pub
+-bash: pbcopy: command not found
+gw$ sudo apt-get install xclip
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for lchen: 
+Sorry, try again.
+[sudo] password for lchen: 
+lchen is not in the sudoers file.  This incident will be reported.
+gw$ 
