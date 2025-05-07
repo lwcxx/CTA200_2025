@@ -1,0 +1,263 @@
+Last login: Tue May  6 15:21:49 on ttys001
+chenliwen@MacBook-Air-697 ~ % ssh lchen@gw.cita.utoronto.ca
+(lchen@gw.cita.utoronto.ca) Password: 
+(lchen@gw.cita.utoronto.ca) Verification code: 193308
+Last login: Tue May  6 15:13:00 2025 from falcon.cita.utoronto.ca
+-bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+gw$ git log
+fatal: bad default revision 'HEAD'
+gw$ git commit -m "initial commit"
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.README.md.swp
+#	.bash_history
+#	.bashrc
+#	.config/
+#	.cshrc
+#	.esd_auth
+#	.jupyter/
+#	.local/
+#	.login
+#	.procmailrc
+#	.profile
+#	.ssh/
+#	.vacation.msg
+#	README.md
+#	a.out
+#	files_and_folders
+#	history.txt
+#	output.txt
+nothing added to commit but untracked files present (use "git add" to track)
+gw$ .git/CTA200_2025
+-bash: .git/CTA200_2025: No such file or directory
+gw$ .git/README.md
+-bash: .git/README.md: No such file or directory
+gw$ git pull
+fatal: No remote repository specified.  Please, specify either a URL or a
+remote name from which new revisions should be fetched.
+gw$ git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.README.md.swp
+#	.bash_history
+#	.bashrc
+#	.config/
+#	.cshrc
+#	.esd_auth
+#	.jupyter/
+#	.local/
+#	.login
+#	.procmailrc
+#	.profile
+#	.ssh/
+#	.vacation.msg
+#	README.md
+#	a.out
+#	files_and_folders
+#	history.txt
+#	output.txt
+nothing added to commit but untracked files present (use "git add" to track)
+gw$ git add README.md
+gw$ git commit -m "Add README.md file"
+[master (root-commit) e56e79b] Add README.md file
+ Committer: studnet9 <lchen@gw.cita.utoronto.ca>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+gw$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+gw$ git remote add <README.md><https://github.com/lwcxx/CTA200_2025.git>
+-bash: syntax error near unexpected token `<'
+gw$ git remote add README.md https://github.com/lwcxx/CTA200_2025.git
+gw$ git push https://github.com/lwcxx/CTA200_2025.git
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': lwcxx
+Password for 'https://lwcxx@github.com': 
+fatal: Authentication failed for 'https://github.com/lwcxx/CTA200_2025.git/'
+gw$ git push https://github.com/lwcxx/CTA200_2025.git
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': lwcxx
+Password for 'https://lwcxx@github.com': 
+fatal: Authentication failed for 'https://github.com/lwcxx/CTA200_2025.git/'
+gw$ git push https://github.com/lwcxx/CTA200_2025.git
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': lwcxx
+Password for 'https://lwcxx@github.com': 
+fatal: Authentication failed for 'https://github.com/lwcxx/CTA200_2025.git/'
+gw$ git push https://github.com/lwcxx/CTA200_2025.git
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': git config --global push.default simple
+Password for 'https://git config --global push.default simple@github.com': 
+fatal: Authentication failed for 'https://github.com/lwcxx/CTA200_2025.git/'
+gw$ git config --global push.default simple
+gw$ git push https://github.com/lwcxx/CTA200_2025.git
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream https://github.com/lwcxx/CTA200_2025.git master
+
+gw$ git push --set-upstream https://github.com/lwcxx/CTA200_2025.git master
+Username for 'https://github.com': lwcxx
+Password for 'https://lwcxx@github.com': 
+fatal: Authentication failed for 'https://github.com/lwcxx/CTA200_2025.git/'
+gw$ git push https://github.com/lwcxx/CTA200_2025.git/
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream https://github.com/lwcxx/CTA200_2025.git/ master
+
+gw$ git push --set-upstream https://github.com/lwcxx/CTA200_2025.git/ master
+Username for 'https://github.com': lwcxx
+Password for 'https://lwcxx@github.com': 
+fatal: Authentication failed for 'https://github.com/lwcxx/CTA200_2025.git/'
+gw$ git push --set-upstream https://github.com/lwcxx/CTA200_2025.git/ master
+Username for 'https://github.com': lwcxx
+Password for 'https://lwcxx@github.com': 
+fatal: unable to access 'https://github.com/lwcxx/CTA200_2025.git/': The requested URL returned error: 403
+gw$ git push git@github.com:lwcxx/CTA200_2025.git
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream git@github.com:lwcxx/CTA200_2025.git master
+
+gw$ git push --set-upstream git@github.com:lwcxx/CTA200_2025.git master
+The authenticity of host 'github.com (140.82.113.4)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+ECDSA key fingerprint is MD5:7b:99:81:1e:4c:91:a5:0d:5a:2e:2e:80:13:3f:24:ca.
+Are you sure you want to continue connecting (yes/no)? no
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+gw$ g
+  [Restored May 7, 2025 at 13:07:16]
+Last login: Wed May  7 13:05:51 on console
+chenliwen@MacBook-Air-697 ~ % ssh lchen@gw.cita.utoronto.ca
+(lchen@gw.cita.utoronto.ca) Password: 
+(lchen@gw.cita.utoronto.ca) Verification code: 305327
+Last login: Tue May  6 15:33:39 2025 from 100.66.86.237
+-bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+gw$ ssh -L 1234:localhost:1234 lchen@gw.cita.utoronto.ca
+Password: 
+Verification code: 280371
+channel_setup_fwd_listener_tcpip: cannot listen to port: 1234
+Could not request local forwarding.
+Last login: Wed May  7 13:11:48 2025 from 100.66.80.224
+gw$ ssh -L 1234:localhost:1234 kingcrab
+lchen@kingcrab's password: 
+channel_setup_fwd_listener_tcpip: cannot listen to port: 1234
+Could not request local forwarding.
+**************************************************************
+* Please choose the computing server with the lightest load  *
+*                                                            *
+* mussel    CPU load:  0.0/64  used memory:  2.5% of 1024GB  *
+* kingcrab  CPU load:  2.1/96  used memory: 50.1% of  384GB  *
+* homard    CPU load:  0.0/96  used memory:  2.7% of  384GB  *
+* lobster   CPU load: 11.6/96  used memory: 41.4% of  384GB  *
+* calamari  CPU load:  0.0/32  used memory:  1.1% of  256GB  *
+* shrimp    CPU load: 12.9/32  used memory: 11.5% of 256GB  *
+* prawn     CPU load: 11.7/32  used memory:  8.9% of 256GB  *
+**************************************************************
+Last login: Tue May  6 15:13:25 2025 from 128.100.76.51
+kingcrab$ module load python/3.10.2
+kingcrab$ jupyter notebook --port=1234 --no-browser
+[W 2025-05-07 13:13:13.272 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2025-05-07 13:13:13.272 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2025-05-07 13:13:13.272 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[I 2025-05-07 13:13:13.279 LabApp] JupyterLab extension loaded from /cita/modules/python/3.10.2/lib/python3.10/site-packages/jupyterlab
+[I 2025-05-07 13:13:13.280 LabApp] JupyterLab application directory is /cita/modules/python/3.10.2/share/jupyter/lab
+[I 13:13:13.284 NotebookApp] The port 1234 is already in use, trying another port.
+[I 13:13:13.285 NotebookApp] Serving notebooks from local directory: /cita/h/home-2/lchen
+[I 13:13:13.285 NotebookApp] Jupyter Notebook 6.4.7 is running at:
+[I 13:13:13.285 NotebookApp] http://localhost:1235/?token=ce25ff805d1d387a8bc955f20c7a23473c81c19f2275e126
+[I 13:13:13.285 NotebookApp]  or http://127.0.0.1:1235/?token=ce25ff805d1d387a8bc955f20c7a23473c81c19f2275e126
+[I 13:13:13.285 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 13:13:13.291 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///cita/h/home-2/lchen/.local/share/jupyter/runtime/nbserver-253201-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:1235/?token=ce25ff805d1d387a8bc955f20c7a23473c81c19f2275e126
+     or http://127.0.0.1:1235/?token=ce25ff805d1d387a8bc955f20c7a23473c81c19f2275e126
+
